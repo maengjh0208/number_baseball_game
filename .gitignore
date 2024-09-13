@@ -29,3 +29,5 @@ bin/
 .DS_Store
 
 .number_baseball_game.iml
+
+.idea/
