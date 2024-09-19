@@ -33,7 +33,6 @@ public class MenuHandler {
             case "3":
                 System.out.println("< 게임 종료하기 >");
                 System.exit(0);
-                break;
             default:
                 System.out.println("올바른 숫자를 입력해주세요.");
         }
