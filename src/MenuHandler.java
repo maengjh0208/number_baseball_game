@@ -21,7 +21,7 @@ public class MenuHandler {
             case "0":
                 System.out.println("< 자리수 설정하기 >");
                 baseballGame.changeNumberCount();
-                break;
+                System.out.println();
             case "1":
                 System.out.println("< 게임 시작하기 >");
                 baseballGame.startGame();
