@@ -27,7 +27,6 @@ public class BaseballGame {
         int[] inputNumbers = inputValidator.getNumbers(numberCount);
         int strike = 0;
         int ball = 0;
-        int out = 0;
 
         for (int i = 0; i < numberCount; i++) {
             int inputNumber = inputNumbers[i];
@@ -36,18 +35,16 @@ public class BaseballGame {
                 strike++;
             } else if (Arrays.stream(randomNumbers).anyMatch(n -> n == inputNumber)) {
                 ball++;
-            } else {
-                out++;
             }
         }
 
         // 결과 print
-        showResult(strike, ball, out);
+        showResult(strike, ball);
 
         return strike == numberCount;
     }
 
-    public void showResult(int strike, int ball, int out) {
+    public void showResult(int strike, int ball) {
         String answer = "";
 
         if (strike > 0) {
@@ -58,7 +55,7 @@ public class BaseballGame {
             answer += ball + "볼 ";
         }
 
-        if (out == 3) {
+        if (strike == 0 && ball == 0) {
             answer = "아웃";
         }
 

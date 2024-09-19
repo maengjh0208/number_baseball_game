@@ -5,12 +5,9 @@ public class MenuHandler {
     private final BaseballGame baseballGame = new BaseballGame();
 
     public void showMenu() {
-        String number;
-
         while (true) {
             System.out.println("환영합니다! 원하시는 번호를 입력해주세요.\n0.자리수 설정 1.게임 시작하기 2.게임 기록 보기 3.종료하기");
-            number = scanner.nextLine().trim();  // 번호 입력
-            selectMenu(number);                  // 메뉴 선택
+            selectMenu(scanner.nextLine().trim());  // 메뉴 선택
         }
     }
 

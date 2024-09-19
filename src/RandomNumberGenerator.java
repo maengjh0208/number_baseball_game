@@ -4,7 +4,7 @@ import java.util.List;
 
 public class RandomNumberGenerator {
     public int[] generateRandomNumbers(int count) {
-        /* count개수 만큼 중복 없이 난수를 생성한다. count는 3, 4, 5만 허용 */
+        /* count개수 만큼 중복 없이 난수를 생성한다. */
 
         if (count < 1 || count > 10) {
             throw new IllegalArgumentException("올바르지 않은 count 개수::" + count);
