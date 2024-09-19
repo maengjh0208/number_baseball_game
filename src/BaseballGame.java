@@ -11,14 +11,12 @@ public class BaseballGame {
         int[] randomNumbers = randomNumberGenerator.generateRandomNumbers(numberCount);  // 난수 생성
         int attempt = 0;
 
-        System.out.println("< 게임을 시작합니다 >");
-
         while (true) {
             attempt++;
 
             // all strike
             if (play(randomNumbers)) {
-                System.out.println("정답입니다!!");
+                System.out.println("정답입니다!! (시도횟수: " + attempt + ")");
                 baseballGameHistory.addPlayHistory(attempt);
                 break;
             }
@@ -43,7 +41,7 @@ public class BaseballGame {
             }
         }
 
-        // 결과
+        // 결과 print
         showResult(strike, ball, out);
 
         return strike == numberCount;
@@ -71,7 +69,7 @@ public class BaseballGame {
         // 기능: 자리수 설정
         try {
             System.out.println("설정하고자 하는 자리수를 입력하세요.");
-            numberCount = inputValidator.getCount();
+            numberCount = inputValidator.setCount();
             System.out.println(numberCount + "자리수 난이도로 설정되었습니다.");
         } catch (Exception e) {
             System.out.println(e.getMessage());

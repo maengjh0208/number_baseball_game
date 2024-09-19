@@ -18,14 +18,24 @@ public class MenuHandler {
         System.out.println();
 
         switch (menu) {
-            case "0" -> baseballGame.changeNumberCount(); // 자리수 설정
-            case "1" -> baseballGame.startGame();         // 게임 시작
-            case "2" -> baseballGame.baseballGameHistory.showPlayHistory();  // 게임 기록 조회
-            case "3" -> {                                 // 게임 종료
-                System.out.println("게임을 종료합니다.");
+            case "0":
+                System.out.println("< 자리수 설정하기 >");
+                baseballGame.changeNumberCount();
+                break;
+            case "1":
+                System.out.println("< 게임 시작하기 >");
+                baseballGame.startGame();
+                break;
+            case "2":
+                System.out.println("< 게임 기록 조회 >");
+                baseballGame.baseballGameHistory.showPlayHistory();
+                break;
+            case "3":
+                System.out.println("< 게임 종료하기 >");
                 System.exit(0);
-            }
-            default -> System.out.println("올바른 숫자를 입력해주세요.");
+                break;
+            default:
+                System.out.println("올바른 숫자를 입력해주세요.");
         }
 
         System.out.println();

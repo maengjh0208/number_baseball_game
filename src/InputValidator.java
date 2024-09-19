@@ -47,8 +47,7 @@ public class InputValidator {
         }
     }
 
-    public int getCount() {
-        // 기능: 자리수 입력
+    public int setCount() {
         try {
             int count = Integer.parseInt(scanner.nextLine().trim());
 
