@@ -17,6 +17,10 @@
 ### 파일 설명
 - `Main.java`: 게임 진입점으로 게임 초기화와 메인 루프를 담당한다.
 - `BaseballGame.java`: 게임 전반에 대한 로직을 포함하고 있다.
+- `InputValidator.java`: 플레이어 입력값을 받는 로직과 검증 로직을 포함하고 있다.
+- `RandomNumberGenerator`: 컴퓨터가 랜덤 숫자를 생성하는 로직을 포함하고 있다.
+- `MenuHandler`: 메뉴 선택 기능. 즉, 플레이어와의 상호작용을 통해 게임의 흐름을 조정한다.
+- `BaseballGameHistory`: 게임 초기화 이후 게임이 종료될 때 까지, 지난 게임 기록을 보관하고 조회하는 기능을 포함하고 있다.
 
 ### 게임 실행 방법
 - clone repository
